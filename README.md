@@ -1,6 +1,5 @@
 # Lightweight Single image Dehazing Network with Residual Feature Attention 
-Official implementation.
-by Huiming Li
+
 
 ### Dependencies and Installation
 
