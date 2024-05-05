@@ -7,7 +7,7 @@ from torch.nn.modules import conv
 from torch.nn.modules.utils import _pair
 import math
 
-#iteratively solve for inverse sqrt of a matrix # 求conv^(-0.5)
+#iteratively solve for inverse sqrt of a matrix 
 def isqrt_newton_schulz_autograd(A, numIters):
     dim = A.shape[0]
     normA=A.norm()
@@ -20,7 +20,7 @@ def isqrt_newton_schulz_autograd(A, numIters):
         Y = Y@T
         Z = T@Z
     #A_sqrt = Y*torch.sqrt(normA)
-    A_isqrt = Z / torch.sqrt(normA) # 取的是平方根的倒数
+    A_isqrt = Z / torch.sqrt(normA) 
     return A_isqrt
 
 def isqrt_newton_schulz_autograd_batch(A, numIters):
